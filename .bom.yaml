@@ -1,0 +1,11 @@
+name: panorama
+description: Documentation and context aggregator for the foundry ecosystem
+type: aggregator
+remotes:
+  origin: https://github.com/jazzydog-labs/panorama.git
+integration_quality:
+  documentation_completeness: excellent
+  bom_integration: complete
+  context_file_coverage: comprehensive
+  last_updated: "2025-01-27"
+  notes: "Self-documenting aggregator with comprehensive ecosystem context" 
