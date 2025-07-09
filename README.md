@@ -191,6 +191,57 @@ just security
 just clean
 ```
 
+### Tmux Session Management
+
+Panorama includes a `pano` command for managing a tmux session that displays all foundry repositories simultaneously:
+
+#### Installation
+
+```bash
+# Install the pano command
+./scripts/install_pano.sh
+```
+
+#### Usage
+
+```bash
+# Open panorama view (creates session if needed)
+pano
+
+# Check session status
+pano status
+
+# Close the panorama session
+pano close
+
+# Refresh session with updated repo list
+pano refresh
+
+# Run a command in all repository panes
+pano run "git status"
+pano run "git pull"
+pano run "pwd"
+
+# Collapse prompts to simple '>' for cleaner view
+pano prompt-collapse
+```
+
+#### Features
+
+- **Multi-repo view**: Displays all 12 foundry repositories in a tiled tmux layout
+- **Automatic session management**: Creates named session "panorama" for easy access
+- **Graceful error handling**: Handles missing repositories and shows warnings
+- **Repository awareness**: Each pane starts in the correct repository directory
+- **Easy navigation**: Use standard tmux commands to navigate between panes
+- **Bulk command execution**: Run commands across all repositories simultaneously with `pano run`
+- **Auto-collapsed prompts**: Automatically simplifies prompts to `>` for cleaner multi-pane viewing
+- **Pane titles**: Shows `<repo name>:<working directory>` at the top of each pane
+
+#### Requirements
+
+- tmux (install with `brew install tmux` on macOS)
+- Python 3 with PyYAML
+
 ### Adding New Repositories
 
 1. Add repository metadata to `bill-of-materials/repos.yaml`
