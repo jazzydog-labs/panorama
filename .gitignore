@@ -76,7 +76,16 @@ Thumbs.db
 output/context.md
 output/context.json
 test_output/
+demo_output/
 *.log
+
+# Security reports
+bandit-report.json
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
 
 # Temporary files
 *.tmp

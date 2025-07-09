@@ -150,6 +150,47 @@ Panorama integrates with the `bill-of-materials` repository as the canonical sou
 
 ## Development
 
+### Setup
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+
+# Install pre-commit hooks
+just install-hooks
+```
+
+### Development Commands
+
+This project uses [just](https://github.com/casey/just) for task automation:
+
+```bash
+# Run tests with coverage (must maintain >80%)
+just test
+
+# Run full CI pipeline (tests + formatting + linting + typechecking + security)
+just ci
+
+# Run demo scripts
+just demo
+
+# Format code with black
+just format
+
+# Lint with ruff
+just lint
+
+# Type check with mypy
+just typecheck
+
+# Security scan with bandit
+just security
+
+# Clean generated files
+just clean
+```
+
 ### Adding New Repositories
 
 1. Add repository metadata to `bill-of-materials/repos.yaml`
